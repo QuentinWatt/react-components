@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It has the correct header matches the snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="border-b bg-white"
+  >
+    <nav
+      class="container mx-auto px-3"
+    >
+      <div
+        class="flex justify-between items-center h-16"
+      >
+        <span
+          class="font-bold text-3xl"
+        >
+          <a
+            href="/"
+          >
+            Qcasts
+          </a>
+        </span>
+        <ul
+          class="flex items-center"
+        >
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</DocumentFragment>
+`;

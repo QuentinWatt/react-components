@@ -12,6 +12,11 @@ describe("It has the correct header", () => {
     render(<Header />);
   });
 
+  it("matches the snapshot", () => {
+    const { asFragment } = render(<Header />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("has a copyright", () => {
     expect(screen.getByText("Qcasts")).toBeTruthy();
   });
