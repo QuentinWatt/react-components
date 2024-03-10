@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It has the correct footer matches the snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="bg-gray-800 text-white"
+  >
+    <div
+      class="border-b border-gray-500"
+    >
+      <div
+        class="container mx-auto px-3"
+      >
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-4 my-6"
+        >
+          <ul>
+            <li>
+              A list item
+            </li>
+            <li>
+              Second item
+            </li>
+            <li>
+              Third item
+            </li>
+            <li>
+              Fourth item
+            </li>
+          </ul>
+          <ul>
+            <li>
+              A list item
+            </li>
+            <li>
+              Another item
+            </li>
+            <li>
+              Other item
+            </li>
+            <li>
+              Last item
+            </li>
+          </ul>
+          <ul>
+            <li>
+              A list item
+            </li>
+            <li>
+              Second item
+            </li>
+            <li>
+              Third item
+            </li>
+            <li>
+              Fourth item
+            </li>
+          </ul>
+          <div>
+            <span />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mx-auto px-3 py-6"
+    >
+      <div
+        class="flex justify-between items-center"
+      >
+        <span
+          class="font-bold text-xl"
+        >
+          Qcasts
+        </span>
+        <span
+          class="text-xs"
+        >
+          © 2024 Quentin Watt
+        </span>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

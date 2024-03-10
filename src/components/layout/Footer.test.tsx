@@ -2,6 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Footer from "./Footer";
 
 describe("It has the correct footer", () => {
+  it("matches the snapshot", () => {
+    const { asFragment } = render(<Footer />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("has a copyright", () => {
     render(<Footer />);
     expect(screen.getByText("© 2024 Quentin Watt")).toBeTruthy();
