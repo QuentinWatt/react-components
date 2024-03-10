@@ -1,14 +1,15 @@
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 
-describe("It has the correct footer", () => {
+jest.mock("react-router-dom", () => ({
+  Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
+    <a href={to}>{children}</a>
+  ),
+}));
+
+describe("It has the correct header", () => {
   beforeEach(() => {
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    );
+    render(<Header />);
   });
 
   it("has a copyright", () => {
