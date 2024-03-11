@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../components/shared/Button";
-import Alert from "../components/shared/Alert";
+import Button from "@components/shared/Button";
+import Alert from "@components/shared/Alert";
 
 const Home: React.FC = () => {
   return (
