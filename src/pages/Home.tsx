@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "@components/shared/Button";
-import Alert from "@components/shared/Alert";
+import Button from "@/components/shared/Button";
+import Alert from "@/components/shared/Alert";
+import Accordion from "@/components/shared/Accordion";
 
 const Home: React.FC = () => {
   return (
@@ -22,6 +23,16 @@ const Home: React.FC = () => {
           <Alert className="warning">This is a message</Alert>
           <Alert className="danger">This is a message</Alert>
           <Alert className="success">This is a message</Alert>
+        </div>
+      </div>
+
+      <div className="my-3">
+        <h2 className="font-bold mb-3 text-xl">Accordion</h2>
+        <div className="grid  grid-cols-5 gap-3">
+          <Accordion
+            title={<h3>A title</h3>}
+            body={<div>Body content goes here.</div>}
+          />
         </div>
       </div>
     </main>
