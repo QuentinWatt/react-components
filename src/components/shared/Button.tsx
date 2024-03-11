@@ -3,7 +3,7 @@ import Loader from "./Loader";
 import "./Button.css";
 
 interface Props {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
   loading?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;

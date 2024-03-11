@@ -20,7 +20,7 @@ const Loader: React.FC<Props> = ({
     borderRightColor: `${hilightColor}`,
   };
 
-  return <div className="loader" style={styles}></div>;
+  return <div data-testid="loader" className="loader" style={styles}></div>;
 };
 
 export default Loader;
