@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches the snapshot 1`] = `
+exports[`Shared loader component matches the snapshot 1`] = `
 <DocumentFragment>
   <div
     class="loader"
+    data-testid="loader"
     style="width: 28px; border-width: 5px; border-color: lightblue; border-right-color: black;"
   />
 </DocumentFragment>
