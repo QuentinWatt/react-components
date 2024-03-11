@@ -1,6 +1,5 @@
 import { MouseEventHandler } from "react";
 import Loader from "./Loader";
-import "./Button.css";
 
 interface Props {
   children: React.ReactNode;
