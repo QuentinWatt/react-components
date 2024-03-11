@@ -4,7 +4,6 @@ import Button from "./Button";
 
 jest.mock("./Loader", () => () => <div data-testid="loader-mock">loader</div>);
 jest.mock("./Loader.css", () => () => {});
-jest.mock("./Button.css", () => () => {});
 
 describe("Shared button component", () => {
   it("renders with children, and props as button text", () => {
