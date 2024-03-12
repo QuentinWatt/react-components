@@ -35,15 +35,22 @@ const Accordion: React.FC<Props> = ({
     <div className="border rounded">
       <div
         onClick={toggleState}
-        className="border-b px-3 py-2 flex items-center justify-between"
+        className={`px-3 py-2 flex items-center justify-between ${
+          isOpen ? "border-b" : ""
+        }`}
       >
         {title}{" "}
         <FontAwesomeIcon
           icon={faCaretDown}
-          className={isOpen ? "rotate-90" : ""}
+          className={`transition-all duration-300 ${isOpen ? "rotate-90" : ""}`}
         />
       </div>
-      {isOpen && <div className="accordion-content">{body}</div>}
+      <div
+        data-testid="accordion-content"
+        className={`accordion-content ${isOpen ? "open" : ""}`}
+      >
+        {body}
+      </div>
     </div>
   );
 };

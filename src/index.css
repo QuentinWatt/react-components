@@ -34,16 +34,11 @@
   }
 
   .accordion-content {
-    @apply p-3 bg-gray-200 relative;
-    animation: fade-in 0.3s ease-in;
+    @apply py-0 px-3 bg-gray-200 relative h-0 overflow-hidden;
+    transition: all 0.5s;
   }
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .accordion-content.open {
+    @apply py-3 h-auto;
   }
 }

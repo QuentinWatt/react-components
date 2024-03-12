@@ -23,11 +23,11 @@ describe("Shared accordion component", () => {
     expect(titleElement).toBeInTheDocument();
 
     const bodyElement = queryByText(/Toggled content/i);
-    expect(bodyElement).toBeNull();
+    expect(bodyElement).not.toHaveClass("open");
   });
 
-  it("toggles content when the title is clicked", () => {
-    const { getByText, queryByText } = render(
+  it("toggles content when the title is clicked", async () => {
+    const { getByText, getByTestId } = render(
       <Accordion
         title={<h3>A clickable title</h3>}
         body={<div>Toggled content</div>}
@@ -37,17 +37,14 @@ describe("Shared accordion component", () => {
     const titleElement = getByText(/A clickable title/i);
     expect(titleElement).toBeInTheDocument();
 
-    let bodyElement = queryByText(/Toggled content/i);
-    expect(bodyElement).toBeNull();
+    const accordionElement = getByTestId("accordion-content");
+    expect(accordionElement).not.toHaveClass("open");
 
     fireEvent.click(titleElement);
-
-    bodyElement = queryByText(/Toggled content/i);
-    expect(bodyElement).toBeInTheDocument();
+    expect(accordionElement).toHaveClass("open");
 
     fireEvent.click(titleElement);
-    bodyElement = queryByText(/Toggled content/i);
-    expect(bodyElement).toBeNull();
+    expect(accordionElement).not.toHaveClass("open");
   });
 
   it("fires an onOpen event", () => {
