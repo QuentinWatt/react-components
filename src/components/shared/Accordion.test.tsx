@@ -2,6 +2,14 @@ import "@testing-library/jest-dom";
 import { render, fireEvent } from "@testing-library/react";
 import Accordion from "./Accordion";
 
+jest.mock("@fortawesome/react-fontawesome", () => ({
+  FontAwesomeIcon: jest.fn(),
+}));
+
+jest.mock("@fortawesome/free-solid-svg-icons", () => ({
+  faCaretDown: {},
+}));
+
 describe("Shared accordion component", () => {
   it("renders with a title only", () => {
     const { getByText, queryByText } = render(
