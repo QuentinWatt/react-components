@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   title: React.ReactNode;
@@ -31,10 +33,24 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <div className="border rounded">
-      <div onClick={toggleState} className="border-b px-3 py-2">
-        {title}
+      <div
+        onClick={toggleState}
+        className={`px-3 py-2 flex items-center justify-between ${
+          isOpen ? "border-b" : ""
+        }`}
+      >
+        {title}{" "}
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className={`transition-all duration-300 ${isOpen ? "rotate-90" : ""}`}
+        />
       </div>
-      {isOpen && <div className="accordion-content">{body}</div>}
+      <div
+        data-testid="accordion-content"
+        className={`accordion-content ${isOpen ? "open" : ""}`}
+      >
+        {body}
+      </div>
     </div>
   );
 };
